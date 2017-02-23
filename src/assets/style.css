@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 18px;
+  font-family: Microsoft Yahei;
+}
+
+/*@media only screen and (min-width: 980px){*/
+  /*html {*/
+    /*font-size: 25px !important;*/
+  /*}*/
+/*}*/
+/*@media only screen and (min-width: 1024px){*/
+  /*html {*/
+    /*font-size: 26.75px !important;*/
+  /*}*/
+/*}*/
+/*@media only screen and (min-width: 1440px){*/
+  /*html {*/
+    /*font-size: 30px !important;*/
+  /*}*/
+/*}*/
