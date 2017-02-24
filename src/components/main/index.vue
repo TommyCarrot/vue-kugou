@@ -42,7 +42,7 @@
     },
     methods: {
       playAudio (index) {
-          this.$store.commit('SET_CURRENT_AUDIO',this.audioList[index])
+          this.$store.dispatch('loadAudio',index)
       }
     }
   }

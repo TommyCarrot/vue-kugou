@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   export default {
     name: 'player',
     data () {
@@ -25,9 +26,22 @@
       }
     },
     computed: {
+      ...mapState({
+        index: state => state.currentAudioIndex,
+        audioList: state => state.audioList
+      }),
       audio () {
         this.isPlay = true;//when the current audio is changed, initial the status to default.
-        return this.$store.state.currentAudio
+        if(this.index===-1){
+          return {
+            img: 'http://m.kugou.com/v3/static/images/index/logo_kugou.png',
+            title: '',
+            singer: '',
+            url: ''
+          }
+        }else {
+          return this.audioList[this.index]
+        }
       }
     },
     methods: {
@@ -45,7 +59,7 @@
         }
       },
       next () {
-        this.$store.commit('SET_CURRENT_AUDIO',this.audioList[index])
+        this.$store.dispatch('loadAudio',this.index+1)
       }
     }
   }
