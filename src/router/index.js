@@ -5,6 +5,7 @@ import Index from 'components/main/index'
 import Rank from 'components/main/rank'
 import songList from 'components/main/song-list'
 import Singer from 'components/main/singer'
+import Test from 'components/main/base-list'
 
 Vue.use(Router);
 
@@ -27,6 +28,10 @@ export default new Router({
       name: 'singer',
       component: Singer
     }, {
+      path: '/test/:pageId',
+      name: 'test',
+      component: Test
+    },{
       path:'*',redirect:'/index'
     }
   ]

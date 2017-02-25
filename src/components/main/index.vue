@@ -52,15 +52,17 @@
   .mint-swipe {
     height: 39vw !important;
   }
+  .mint-swipe img {
+    width: 100%;
+    height: 100%;
+  }
+
   .mint-cell-wrapper {
     height: 4.0714rem !important;
     font-size: 1rem !important;
     padding-left: 1rem !important;
   }
-  .mint-swipe img {
-    width: 100%;
-    height: 100%;
-  }
+
 
   .songs-list img {
     width: 1.0rem;

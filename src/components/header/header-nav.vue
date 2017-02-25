@@ -23,15 +23,19 @@
       goNav(index){
         switch (index) {
           case 1 :
+            this.$store.commit('SET_HEAD_NAV', 'index')
             this.$router.push({path: 'index'});
             break;
           case 2 :
+            this.$store.commit('SET_HEAD_NAV', 'rank')
             this.$router.push({path: 'rank'});
             break;
           case 3 :
+            this.$store.commit('SET_HEAD_NAV', 'song-list')
             this.$router.push({path: 'song-list'});
             break;
           case 4 :
+            this.$store.commit('SET_HEAD_NAV', 'singer')
             this.$router.push({path: 'singer'});
             break;
         }
@@ -44,6 +48,7 @@
 
   .header-nav-container {
     padding: 0 .7143rem;
+    background: #fff;
   }
 
   .mint-tab-item {
