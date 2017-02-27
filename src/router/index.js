@@ -6,7 +6,7 @@ import Index from 'components/main/index'
 import Rank from 'components/main/rank'
 import songList from 'components/main/song-list'
 import Singer from 'components/main/singer'
-import Test from 'components/main/base-list'
+import Base from 'components/main/base-list'
 
 Vue.use(Router);
 
@@ -29,9 +29,17 @@ const router = new Router({
       name: 'singer',
       component: Singer
     }, {
-      path: '/rank/test/:pageId',
-      name: 'test',
-      component: Test
+      path: '/rank/base/:pageId',
+      name: 'rank-base',
+      component: Base
+    },{
+      path: '/song-list/base/:pageId',
+      name: 'song-list-base',
+      component: Base
+    },{
+      path: '/singer/base/:pageId',
+      name: 'singer-base',
+      component: Base
     },{
       path:'*',redirect:'/index'
     }

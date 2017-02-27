@@ -2,7 +2,7 @@
   <div>
     <div  class="main-top">
       <img :src="pageTopInfo.pageTopImg" alt="">
-      <div class="main-top-info" v-if="true">
+      <div class="main-top-info" v-if="pageTopInfo.pageTopExtra != ''">
         <span>{{pageTopInfo.pageTopExtra}}</span>
       </div>
     </div>
