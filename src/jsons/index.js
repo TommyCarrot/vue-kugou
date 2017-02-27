@@ -1,5 +1,5 @@
-let rank_json = {
-  '酷狗飙升榜': {
+let rank_json = [
+  {
     pageTop: {
       pageTopTitle: '酷狗飙升榜',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150331/20150331161100773965.png',
@@ -51,7 +51,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   },
-  '酷狗TOP500': {
+  {
     pageTop: {
       pageTopTitle: '酷狗TOP500',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150331/20150331161158855874.png',
@@ -103,7 +103,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   },
-  '网络红歌榜': {
+  {
     pageTop: {
       pageTopTitle: '网络红歌榜',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150818/20150818104301582059.png',
@@ -155,7 +155,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   },
-  'DJ热歌榜': {
+  {
     pageTop: {
       pageTopTitle: '酷狗飙升榜',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150331/20150331161100773965.png',
@@ -207,7 +207,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   },
-  '华语新歌榜': {
+  {
     pageTop: {
       pageTopTitle: '酷狗飙升榜',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150331/20150331161100773965.png',
@@ -259,7 +259,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   },
-  '欧美新歌榜': {
+  {
     pageTop: {
       pageTopTitle: '酷狗飙升榜',
       pageTopImg: 'http://imge.kugou.com/mcommon/400/20150331/20150331161100773965.png',
@@ -311,7 +311,7 @@ let rank_json = {
         "img": "",
         "url": ""}]
   }
-}
+]
 
 let song_list_json = {
   '酷狗飙升榜': {

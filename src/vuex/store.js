@@ -7,7 +7,7 @@ const store = new Vuex.Store({
   state: {
     headNav: 'index',
     isShowTopNav: true,
-    pageId: '',
+    pageId: -1,
     currentAudioIndex: -1,
     audioList: [],
     pageTopInfo: {

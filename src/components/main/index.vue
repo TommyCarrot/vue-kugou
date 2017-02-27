@@ -48,7 +48,7 @@
   }
 </script>
 
-<style>
+<style  scoped>
   .mint-swipe {
     height: 39vw !important;
   }
@@ -62,7 +62,6 @@
     font-size: 1rem !important;
     padding-left: 1rem !important;
   }
-
 
   .songs-list img {
     width: 1.0rem;

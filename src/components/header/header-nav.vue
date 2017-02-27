@@ -1,10 +1,10 @@
 <template>
 <div class="header-nav-container">
-  <mt-navbar v-model="headNav">
-    <mt-tab-item id="head-nav1" @click.native="goNav(1)">新歌</mt-tab-item>
-    <mt-tab-item id="head-nav2" @click.native="goNav(2)">排行</mt-tab-item>
-    <mt-tab-item id="head-nav3" @click.native="goNav(3)">歌单</mt-tab-item>
-    <mt-tab-item id="head-nav4" @click.native="goNav(4)">歌手</mt-tab-item>
+  <mt-navbar v-model="currentNav">
+    <mt-tab-item id="index" >新歌</mt-tab-item>
+    <mt-tab-item id="rank" >排行</mt-tab-item>
+    <mt-tab-item id="head-nav3" >歌单</mt-tab-item>
+    <mt-tab-item id="head-nav4" >歌手</mt-tab-item>
   </mt-navbar>
 </div>
 </template>
@@ -13,34 +13,20 @@
 
   export default {
     name: 'head-nav',
-    data: function () {
-      return {
-        headNav: 'head-nav1'
+    computed: {
+      currentNav: {
+        // getter
+        get: function () {
+          return this.$store.state.headNav
+        },
+        // setter
+        set: function (nav) {
+          this.$store.commit('SET_HEAD_NAV', nav)
+          this.$router.push({path: nav});
+        }
       }
     },
     components: {},
-    methods: {
-      goNav(index){
-        switch (index) {
-          case 1 :
-            this.$store.commit('SET_HEAD_NAV', 'index')
-            this.$router.push({path: 'index'});
-            break;
-          case 2 :
-            this.$store.commit('SET_HEAD_NAV', 'rank')
-            this.$router.push({path: 'rank'});
-            break;
-          case 3 :
-            this.$store.commit('SET_HEAD_NAV', 'song-list')
-            this.$router.push({path: 'song-list'});
-            break;
-          case 4 :
-            this.$store.commit('SET_HEAD_NAV', 'singer')
-            this.$router.push({path: 'singer'});
-            break;
-        }
-      }
-    }
   }
 </script>
 
