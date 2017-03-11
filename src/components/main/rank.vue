@@ -14,6 +14,7 @@
     name: 'rank',
     data () {
       return {
+          age:0,
           rankList:rank_json
       }
     },

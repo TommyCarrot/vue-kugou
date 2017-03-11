@@ -17,12 +17,12 @@
       currentNav: {
         // getter
         get: function () {
-          return this.$store.state.headNav
+          return this.$store.state.headNav //set current selected nav from state
         },
         // setter
         set: function (nav) {
-          this.$store.commit('SET_HEAD_NAV', nav)
-          this.$router.push({path: nav});
+          this.$store.commit('SET_HEAD_NAV', nav)//set state nav when click nav items
+          this.$router.push({path: nav});//goto specified page when click
         }
       }
     },

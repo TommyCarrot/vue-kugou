@@ -23,7 +23,7 @@
 
 <script>
 
-  import songs_json from 'jsons/songs'
+//  import  { index_json } from 'jsons/index'
   import { mapState } from 'vuex'
 
   export default {
@@ -33,7 +33,12 @@
         }
     },
     created () {
-        this.$store.dispatch('loadAudioList',songs_json);
+//        this.$store.dispatch('loadAudioList',index_json);
+//localhost:5000
+//http://tommyibi.duapp.com
+      this.$http.get('http://localhost:5000/api/kugou/indexList').then(
+        respone => this.$store.dispatch('loadAudioList',respone.body)
+      )
     },
     computed: {
       ...mapState({

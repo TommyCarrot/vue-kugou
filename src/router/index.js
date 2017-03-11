@@ -49,6 +49,7 @@ const router = new Router({
 //initial the state when refresh the page
 router.beforeEach((to, from, next) => {
   if(to.path.search('rank')!=-1){
+    console.log("global router enter")
     store.commit('SET_HEAD_NAV', 'rank')
   } else if(to.path.search('index')!=-1){
     store.commit('SET_HEAD_NAV', 'index')

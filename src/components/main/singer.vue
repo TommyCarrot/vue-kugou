@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <div class="hot">
@@ -13,8 +12,6 @@
     <div class="western">
       <mt-cell  v-for="(item,index) in westernSingerList" :title="item.pageTop.pageTopTitle" @click.native="openRank(index)" is-link></mt-cell>
     </div>
-
-
   </div>
 </template>
 

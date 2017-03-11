@@ -32,6 +32,9 @@
         {
           case 'rank':
             vm.$store.dispatch('loadMainTopInfo',rank_json[vm.$route.params.pageId].pageTop)
+            vm.$http.get('http://localhost:5000/api/kugou/rankList'+'/'+vm.$route.params.pageId).then(
+              respone => vm.$store.dispatch('loadAudioList',respone.body)
+            )
             vm.$store.dispatch('loadAudioList',rank_json[vm.$route.params.pageId].audioList)
             break;
           case 'song-list':

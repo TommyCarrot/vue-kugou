@@ -4,10 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/store'
+import VueResource from 'vue-resource'
 import mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import './assets/style.css'
+
 Vue.use(mint);
+Vue.use(VueResource);
 
 /* eslint-disable no-new */
 new Vue({
